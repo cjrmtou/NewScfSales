@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as authSvcs from './services/authentication.service';
-import * as dataSvcs from './services/data.service';
 import * as models from './models/PostData';
+import { Customer } from './Customer';
 
 
 @Component({
@@ -19,14 +19,15 @@ export class AppComponent implements OnInit {
   private postBack: string = 'grey';
 
   private userName: string='';
+  //private customerData: Customer;
 
   constructor(
     private authSvc: authSvcs.AuthenticationService,
-    //private dataSvc: dataSvcs.DataService
   ) {  }
 
   ngOnInit() {
-    this.testAuthentication();
+    this.testAuthentication();    
+    //this.getCustomers();
   }
 
   testAuthentication(): void {
@@ -40,14 +41,13 @@ export class AppComponent implements OnInit {
       e => { console.log(e); this.authBack = 'error'; }
     );
     console.log(this.userName);
-    //debugger;
   }
 
-  //testPostData(): void {
-  //  this.dataSvc.save(new models.PostDataModel({ Id: 1, Name: 'DeBiese', IsTrue: false, CreatedOn: new Date() }))
+  //getCustomers(): any {
+  //  this.authSvc.getCustomers()
   //    .subscribe(
-  //    r => { this.postRslt = r; this.postBack = 'success'; },
-  //    e => { console.log(e); this.postBack = 'error'; }
+  //    r => this.customerData = r,
+  //    e => { console.log(e) }
   //    );
   //}
 }

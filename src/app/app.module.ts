@@ -9,6 +9,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DataTablesModule } from 'angular-datatables';
+import * as salesService from './services/customer-data.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DataTablesModule } from 'angular-datatables';
       multi: true
     },
     authSvcs.AuthenticationService,
+    salesService.CustomerDataService
   ],
   bootstrap: [AppComponent]
 })
