@@ -15,7 +15,7 @@ export class CustomerDataService {
     console.log('Calling getCustomers');
 
     let serviceUrl: string = `${environment.serviceBaseUrl}api/getCustomers`;
-    return this.http.get(serviceUrl, { responseType: 'text' })
+    return this.http.get(serviceUrl, { responseType: 'text' } )
       .map((rslt: string) => {
         return rslt;
       });
