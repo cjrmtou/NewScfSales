@@ -13,14 +13,7 @@ import * as custSvcs from '../services/customer-data.service';
 export class CustomerListComponent implements OnInit {
   private rawCustomerData: any;
   private customerData: Array<Customer>;
-
   private shipToRawData: Array<CustomerShipTo>;
-  //= [
-  //  { Id: 1, OrgId: '1425', CustomerName: 'Costco', AccountNumber: '01020393', ShipTo: ['001', '002', '003'] },
-  //  { Id: 2, OrgId: '1425', CustomerName: 'Costco', AccountNumber: '01020395', ShipTo: ['01B', '02B', '03B'] },
-  //  { Id: 3, OrgId: '1425', CustomerName: 'Costco', AccountNumber: '01020394', ShipTo: ['01', '02', '03'] },
-  //  { Id: 4, OrgId: '1425', CustomerName: 'Costco', AccountNumber: '01020397', ShipTo: ['1A', '2B', '3C'] }
-  //]  
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
