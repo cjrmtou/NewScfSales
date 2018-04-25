@@ -1,0 +1,13 @@
+<table>
+  <tr style="text-align:center">
+    <td>
+      <span class="fa fa-clock-o" style="color:darkgreen"></span> Start Time:
+      <br />
+      <select style="font-size:12px; border:1px solid #ccc; border-radius:2px; padding:3px 5px;width:80px">
+        <option value="-1">Select</option>
+        <option *ngFor="let hour of startTime" value={{hour}}>{{hour}}</option>
+      </select>
+    </td>
+  </tr>
+</table>
+

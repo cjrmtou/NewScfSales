@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>
+      <span class="fa fa-clock-o" style="color:darkgreen"></span> End Time: <br />
+      <select style="font-size:12px; border:1px solid #ccc; border-radius:2px; padding:3px 5px; width:80px;margin-left:15px">
+        <option value="-1">Select</option>
+        <option *ngFor="let hour of endTime" value={{hour}}>{{hour}}</option>
+      </select>
+    </td>
+  </tr>
+</table>

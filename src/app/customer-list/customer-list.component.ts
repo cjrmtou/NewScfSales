@@ -4,6 +4,7 @@ import { Subject } from 'rxjs/Subject';
 //import { CustomerDataService } from '../services/customer-data.service';
 import * as authSvcs from '../services/authentication.service';
 import * as custSvcs from '../services/customer-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-list',
@@ -18,7 +19,12 @@ export class CustomerListComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
 
-  constructor(private custSvc: custSvcs.CustomerDataService) { }  
+  location: Location;
+
+  constructor(
+    private custSvc: custSvcs.CustomerDataService,
+    private router: Router
+  ) { }  
 
   ngOnInit() {
     this.dtOptions = {
@@ -34,8 +40,9 @@ export class CustomerListComponent implements OnInit {
   }
 
   edit(row) {    
-    alert(row.SelectedAccountNumber);
-    alert(row.SelectedShipTo);
+    //alert(row.SelectedAccountNumber);
+    //alert(row.SelectedShipTo);
+    this.router.navigate(['/delivery', row.OrgId,row.SelectedAccountNumber, row.SelectedShipTo ]);
   }
 
   onSelect(accountNumber, row) {  

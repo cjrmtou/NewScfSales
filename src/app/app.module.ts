@@ -10,11 +10,17 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DataTablesModule } from 'angular-datatables';
 import * as salesService from './services/customer-data.service';
+import { DeliveryWindowComponent } from './delivery-window/delivery-window.component';
+import { TableCellTimeComponent } from './table-cell-time/table-cell-time.component';
+import { TableCellEndTimeComponent } from './table-cell-end-time/table-cell-end-time.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    DeliveryWindowComponent,
+    TableCellTimeComponent,
+    TableCellEndTimeComponent
   ],
   imports: [
     BrowserModule,

@@ -71,3 +71,8 @@ body {
   color: #d2322d;
   font-weight: bold;
 }
+
+.DataTableHeader {
+  background-color: #555;
+  color: white
+}
